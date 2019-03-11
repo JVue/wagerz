@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Wagerz - Admin Functions</title>
+    <link href="css/bootstrap-combined.min.css" rel='stylesheet'/>
+  </head>
+  <%= @user_session_status %>
+  <body class='container'>
+    <div style="float:left">
+    <h2>Basic User Functions</h2><br>
+    <p><b>Add New User</b></p>
+    <form method="POST" action="/add_new_user">
+      <input type="text" placeholder="Username" name="username">&nbsp
+      <input type="password" placeholder="Password" name="password">&nbsp
+      <input type="text" placeholder="Role" name="role">&nbsp
+      <input type="submit" value="Add New user">
+    </form>
+    <br>
+    <p><b>Reset User Password</b></p>
+    <form method="POST" action="/reset_user_password">
+      <input type="text" placeholder="Username" name="username">&nbsp
+      <input type="text" placeholder="New Password" name="new_password">&nbsp
+      <input type="submit" value="Reset User Password">
+    </form>
+    <br>
+    <p><b>Delete User</b></p>
+    <form method="POST" action="/delete_user">
+      <input type="text" placeholder="Username" name="username">&nbsp
+      <input type="submit" value="Delete User">
+    </form>
+    <br>
+    <p><b>Change User Role</b></p>
+    <form method="POST" action="/change_user_role">
+      <input type="text" placeholder="Username" name="username">&nbsp
+      <input type="submit" value="Change User Role">
+    </form>
+    <br><br>
+    <h2>Database Functions</h2><br>
+    <p><b>Clear Action Logs</b></p>
+    <form method="POST" action="/clear_action_logs">
+      <input type="submit" value="Clear Action Logs">
+    </form>
+    <br>
+    <p><b>Clear Table</b></p>
+    <form method="POST" action="/clear_table">
+      <input type="text" placeholder="Table Name" name="table_name">&nbsp
+      <input type="submit" value="Clear Table">
+    </form>
+    <br><br>
+    <h2>Biggest Bass Functions</h2><br>
+    <p><b>Add User To BB</b></p>
+    <form method="POST" action="/add_bb_user">
+      <input type="text" placeholder="Username" name="username">&nbsp
+      <input type="submit" value="Add User To BB">
+    </form>
+    <br>
+    <p><b>Remove User From BB</b></p>
+    <form method="POST" action="/remove_bb_user">
+      <input type="text" placeholder="Username" name="username">&nbsp
+      <input type="submit" value="Remove User From BB">
+    </form>
+    <br>
+    <p><b>Add Entry Fee</b></p>
+    <form method="POST" action="/add_bb_entry_fee">
+      <input type="text" placeholder="Username" name="username">&nbsp
+      <input type="text" placeholder="Entry Fee Paid" name="entry_fee_paid">&nbsp
+      <input type="submit" value="Submit">
+    </form>
+    </div>
+  </body>
+</html>
